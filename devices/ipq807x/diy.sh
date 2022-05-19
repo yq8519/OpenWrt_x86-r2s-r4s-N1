@@ -2,12 +2,8 @@
 
 shopt -s extglob
 
-rm -rf package/boot/uboot-envtools package/firmware package/qca package/qat package/kernel/mac80211
-svn export --force https://github.com/Boos4721/openwrt/trunk/package/boot/uboot-envtools package/boot/uboot-envtools
-svn export --force https://github.com/Boos4721/openwrt/trunk/package/firmware package/firmware
-svn export --force https://github.com/Boos4721/openwrt/trunk/package/qca package/qca
-svn export --force https://github.com/Boos4721/openwrt/trunk/package/qat package/qat
-svn export --force https://github.com/Boos4721/openwrt/trunk/package/kernel/mac80211 package/kernel/mac80211
+rm -rf package
+svn export --force https://github.com/Boos4721/openwrt/trunk/package
 
 
 rm -rf target/linux
