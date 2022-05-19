@@ -3,15 +3,15 @@
 shopt -s extglob
 
 rm -rf package/boot/uboot-envtools package/firmware package/qca package/qat package/kernel/mac80211
-svn export https://github.com/Boos4721/openwrt/trunk/package/boot/uboot-envtools package/boot/uboot-envtools
-svn export https://github.com/Boos4721/openwrt/trunk/package/firmware package/firmware
-svn export https://github.com/Boos4721/openwrt/trunk/package/qca package/qca
-svn export https://github.com/Boos4721/openwrt/trunk/package/qat package/qat
-svn export https://github.com/Boos4721/openwrt/trunk/package/kernel/mac80211 package/kernel/mac80211
+svn export --force https://github.com/Boos4721/openwrt/trunk/package/boot/uboot-envtools package/boot/uboot-envtools
+svn export --force https://github.com/Boos4721/openwrt/trunk/package/firmware package/firmware
+svn export --force https://github.com/Boos4721/openwrt/trunk/package/qca package/qca
+svn export --force https://github.com/Boos4721/openwrt/trunk/package/qat package/qat
+svn export --force https://github.com/Boos4721/openwrt/trunk/package/kernel/mac80211 package/kernel/mac80211
 
 
 rm -rf target/linux
-svn export https://github.com/Boos4721/openwrt/trunk/target/linux target/linux
+svn export --force https://github.com/Boos4721/openwrt/trunk/target/linux target/linux
 rm -rf target/linux/generic/hack-5.15/531-debloat_lzma.patch target/linux/generic/hack-5.15/600-bridge_offload.patch
 
 sed -i 's/autocore-arm /my-autocore-arm /' target/linux/ipq807x/Makefile
