@@ -4,6 +4,7 @@ shopt -s extglob
 
 rm -rf package
 svn export --force https://github.com/Boos4721/openwrt/trunk/package
+rm -rf package/lean
 
 
 rm -rf target/linux
