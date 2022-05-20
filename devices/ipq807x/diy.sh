@@ -2,9 +2,8 @@
 
 shopt -s extglob
 
-rm -rf package/kernel package/network
+rm -rf package/kernel
 svn export --force https://github.com/Boos4721/openwrt/trunk/package/kernel package/kernel
-svn export --force https://github.com/Boos4721/openwrt/trunk/package/network package/network
 rm -rf package/lean package/libs/openssl
 svn export --force https://github.com/openwrt/openwrt/branches/openwrt-22.03/package/libs/openssl package/libs/openssl
 
